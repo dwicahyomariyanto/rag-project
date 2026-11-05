@@ -1,0 +1,20 @@
+[project]
+name = "minirag"
+version = "1.0.0"
+description = "Production-style RAG (Retrieval-Augmented Generation) REST API: hybrid search, cross-encoder reranking, SSE streaming, citations, RAGAS evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Dependency management is intentionally kept simple: install everything via
+# `pip install -r requirements.txt` (see README).
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-m 'not ragas'"
+markers = [
+    "ragas: evaluasi end-to-end dengan RAGAS (butuh LLM_API_KEY asli)",
+]
+
+[tool.uv]
+dev-dependencies = []
